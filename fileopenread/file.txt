@@ -1,0 +1,4 @@
+THIS IS A TEST OF PYTHON OPEN()
+I WANT TO READ THIS AND WRITE HERE
+This was included with python
+This was included with python
