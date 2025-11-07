@@ -1,0 +1,42 @@
+# implementation of a bank system,
+# OOP exercise
+
+class bank_account:
+    def __init__(self, name, balance):
+        self.name = name
+        self.balance = balance
+
+    def deposit_money(self, amount):
+        self.balance += amount
+
+    def withdraw_money(self, amount):
+        if amount > self.balance:
+            print("You don't have enough money for that.")
+        else:
+            self.balance -= amount
+
+    def check_balance(self):
+        print(f"Your balance is {self.balance} right now.")
+
+def bank_system():
+    name = input("What is your name? ")
+    new_account = bank_account(name, 0)
+    
+    #main loop
+    while True:
+        menu_input = input("What would you like to do today? (1) Deposit money (2) Withdraw money (3) Check your balance (4) Exit\n> ")
+        if menu_input == 1:
+            amount = float(input("What amount to deposit? ")
+            new_account.deposit_money(amount)
+        if menu_input == 2:
+            withdraw_amount = float(input("What amount to withdraw? "))
+            new_account.withdraw_money(withdraw_amount)
+        if menu_input == 3:
+            new_account.check_balance()
+        if menu_input == 4:
+            break
+        else:
+            print("Invalid option.")
+
+if __name__ == "__main__":
+    bank_system()
